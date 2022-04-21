@@ -19,12 +19,12 @@
     <repository>
       <id>nexusRepo</id>
       <name>Releases</name>
-      <url>http://43.204.37.238:8081/repository/badvel.project-releases/</url>
+      <url>http://15.206.153.202:8081/repository/badvel.project-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexusRepo</id>
       <name>Snapshot</name>
-      <url>http://43.204.37.238:8081/repository/badvel.project-snapshots/</url>
+      <url>http://15.206.153.202:8081/repository/badvel.project-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
   <build>
