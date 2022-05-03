@@ -24,7 +24,7 @@
     <snapshotRepository>
       <id>nexusRepo</id>
       <name>Snapshot</name>
-      <url>http://3.111.171.11:8081/repository/badvel.project-releases/</url>
+      <url>http://3.111.171.11:8081/repository/badvel.project-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
   <build>
