@@ -18,11 +18,11 @@ pipeline {
             }
           }
           stages {
-            stage('Offloading Green') {
-              steps {
-                sh """aws elbv2 modify-listener – listener-arn ${listenerARN} – default-actions '[{"Type": "forward","Order": 1,"ForwardConfig": {"TargetGroups": [{"TargetGroupArn": "${greenARN}", "Weight": 0 },{"TargetGroupArn": "${blueARN}", "Weight": 1 }],"TargetGroupStickinessConfig": {"Enabled": true,"DurationSeconds": 1}}}]'"""
-              }
-            }
+            // stage('Offloading Green') {
+            //   steps {
+            //     sh """aws elbv2 modify-listener – listener-arn ${listenerARN} – default-actions '[{"Type": "forward","Order": 1,"ForwardConfig": {"TargetGroups": [{"TargetGroupArn": "${greenARN}", "Weight": 0 },{"TargetGroupArn": "${blueARN}", "Weight": 1 }],"TargetGroupStickinessConfig": {"Enabled": true,"DurationSeconds": 1}}}]'"""
+            //   }
+            // }
             stage('Deploying to Green') {
               steps {
                 sh '''scp -r index.html ec2-user@15.207.115.110:/usr/share/nginx/html/green/
