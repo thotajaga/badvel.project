@@ -25,7 +25,7 @@ pipeline {
             // }
             stage('Deploying to Green') {
               steps {
-                sh '''scp -r index.html ec2-user@15.207.115.110:/usr/share/nginx/html/green/
+                sh '''scp -r index.html ec2-user@15.207.115.110:/usr/share/nginx/html/
                 ssh -t ec2-user@15.207.115.110 -p 22 << EOF 
                 sudo service nginx restart
                 '''
